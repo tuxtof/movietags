@@ -164,7 +164,7 @@ def tagFile(opts, movie):
     + addCast + addDirectors + addCodirectors + addProducers + addScreenwriters \
     + additionalParameters
     
-    tagCmd = tagCmd.replace('`', "'")
+    tagCmd = tagCmd.replace('`', "'").encode("utf8")
     
     if opts.verbose == 2:
         print "!!Tag command: %s" % tagCmd
